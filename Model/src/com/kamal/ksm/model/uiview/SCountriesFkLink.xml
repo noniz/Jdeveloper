@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SCountriesFkLink"
+  Version="12.2.1.0.31"
+  InheritPersonalization="merge"
+  EntityAssociation="com.kamal.ksm.model.entities.SCountriesFkAssoc">
+  <ViewLinkDefEnd
+    Name="SRegion"
+    Cardinality="1"
+    Source="true"
+    Owner="com.kamal.ksm.model.uiview.SRegionVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="SRegion"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.kamal.ksm.model.uiview.SRegionVO.Id"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="SCountries"
+    Cardinality="-1"
+    Owner="com.kamal.ksm.model.uiview.SCountriesVO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_finderName" Value="SCountries"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.kamal.ksm.model.uiview.SCountriesVO.RegionId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

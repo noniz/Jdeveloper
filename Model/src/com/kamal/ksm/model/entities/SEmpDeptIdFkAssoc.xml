@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SEmpDeptIdFkAssoc"
+  Version="12.2.1.0.31"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="SDept"
+    Cardinality="1"
+    Source="true"
+    Owner="com.kamal.ksm.model.entities.SDeptEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="SDept"/>
+      <Attr Name="_foreignKey" Value="com.kamal.ksm.model.entities.SDeptEO.SDeptIdPk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.kamal.ksm.model.entities.SDeptEO.Id"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="SEmp"
+    Cardinality="-1"
+    Owner="com.kamal.ksm.model.entities.SEmpEO">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="SEmp"/>
+      <Attr Name="_foreignKey" Value="com.kamal.ksm.model.entities.SEmpEO.SEmpDeptIdFk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.kamal.ksm.model.entities.SEmpEO.DeptId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

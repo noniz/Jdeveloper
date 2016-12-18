@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SCountriesVO"
+  Version="12.2.1.0.31"
+  InheritPersonalization="merge"
+  SelectListFlags="1"
+  FromListFlags="1"
+  WhereFlags="1"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  SelectAllAttributes="false"
+  FetchMode="FETCH_AS_NEEDED"
+  PageIterMode="Full">
+  <EntityUsage
+    Name="SCountriesEO"
+    Entity="com.kamal.ksm.model.entities.SCountriesEO"/>
+  <ViewAttribute
+    Name="Id"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Id"
+    EntityUsage="SCountriesEO"
+    AliasName="ID"/>
+  <ViewAttribute
+    Name="Country"
+    IsUnique="true"
+    PrecisionRule="true"
+    EntityAttrName="Country"
+    EntityUsage="SCountriesEO"
+    AliasName="COUNTRY"/>
+  <ViewAttribute
+    Name="RegionId"
+    PrecisionRule="true"
+    EntityAttrName="RegionId"
+    EntityUsage="SCountriesEO"
+    AliasName="REGION_ID"/>
+  <ViewAttribute
+    Name="CountryCode"
+    PrecisionRule="true"
+    EntityAttrName="CountryCode"
+    EntityUsage="SCountriesEO"
+    AliasName="COUNTRY_CODE"/>
+</ViewObject>
